@@ -1,0 +1,25 @@
+use dbTeste
+CREATE TABLE teste1 (
+	nomeId int identity not null primary key,
+	nomeStr varchar(30) null,
+	IdadeInt int not null
+)
+SELECT * FROM teste1
+
+INSERT INTO teste1 (nomeStr,IdadeInt) VALUES ('Ruan','23'),('Cínthia','23'),('Nayara','43')
+
+ALTER TABLE teste1 ADD nivelInt int null
+
+UPDATE teste1 SET nivelInt = '30' where nomeId = 1
+
+SELECT	nomeId,
+		nomeStr,
+		IdadeInt,
+		nivelInt
+	FROM teste1
+ WHERE	idadeInt = 23 AND 
+		nomeId = 1
+
+DELETE FROM teste1 WHERE nomeId = 1
+
+DROP TABLE teste1
